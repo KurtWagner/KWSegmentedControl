@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4526FF3818E0E1B5000A5547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF3718E0E1B5000A5547 /* Foundation.framework */; };
+		4526FF3A18E0E1B5000A5547 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF3918E0E1B5000A5547 /* CoreGraphics.framework */; };
+		4526FF3C18E0E1B5000A5547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF3B18E0E1B5000A5547 /* UIKit.framework */; };
+		4526FF4218E0E1B5000A5547 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4526FF4018E0E1B5000A5547 /* InfoPlist.strings */; };
+		4526FF4418E0E1B5000A5547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4526FF4318E0E1B5000A5547 /* main.m */; };
+		4526FF4818E0E1B5000A5547 /* KWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4526FF4718E0E1B5000A5547 /* KWAppDelegate.m */; };
+		4526FF4B18E0E1B5000A5547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4526FF4918E0E1B5000A5547 /* Main.storyboard */; };
+		4526FF4E18E0E1B5000A5547 /* KWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4526FF4D18E0E1B5000A5547 /* KWViewController.m */; };
+		4526FF5018E0E1B5000A5547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4526FF4F18E0E1B5000A5547 /* Images.xcassets */; };
+		4526FF5718E0E1B5000A5547 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF5618E0E1B5000A5547 /* XCTest.framework */; };
+		4526FF5818E0E1B5000A5547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF3718E0E1B5000A5547 /* Foundation.framework */; };
+		4526FF5918E0E1B5000A5547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4526FF3B18E0E1B5000A5547 /* UIKit.framework */; };
+		4526FF6118E0E1B5000A5547 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4526FF5F18E0E1B5000A5547 /* InfoPlist.strings */; };
+		4526FF6318E0E1B5000A5547 /* KWSegmentedControlDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4526FF6218E0E1B5000A5547 /* KWSegmentedControlDemoTests.m */; };
+		4526FF7118E10325000A5547 /* KWSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4526FF7018E10325000A5547 /* KWSegmentedControl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4526FF5A18E0E1B5000A5547 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4526FF2C18E0E1B5000A5547 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4526FF3318E0E1B5000A5547;
+			remoteInfo = KWSegmentedControlDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4526FF3418E0E1B5000A5547 /* KWSegmentedControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWSegmentedControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4526FF3718E0E1B5000A5547 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4526FF3918E0E1B5000A5547 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4526FF3B18E0E1B5000A5547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4526FF3F18E0E1B5000A5547 /* KWSegmentedControlDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KWSegmentedControlDemo-Info.plist"; sourceTree = "<group>"; };
+		4526FF4118E0E1B5000A5547 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4526FF4318E0E1B5000A5547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4526FF4518E0E1B5000A5547 /* KWSegmentedControlDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KWSegmentedControlDemo-Prefix.pch"; sourceTree = "<group>"; };
+		4526FF4618E0E1B5000A5547 /* KWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWAppDelegate.h; sourceTree = "<group>"; };
+		4526FF4718E0E1B5000A5547 /* KWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWAppDelegate.m; sourceTree = "<group>"; };
+		4526FF4A18E0E1B5000A5547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4526FF4C18E0E1B5000A5547 /* KWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWViewController.h; sourceTree = "<group>"; };
+		4526FF4D18E0E1B5000A5547 /* KWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWViewController.m; sourceTree = "<group>"; };
+		4526FF4F18E0E1B5000A5547 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4526FF5518E0E1B5000A5547 /* KWSegmentedControlDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWSegmentedControlDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4526FF5618E0E1B5000A5547 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4526FF5E18E0E1B5000A5547 /* KWSegmentedControlDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KWSegmentedControlDemoTests-Info.plist"; sourceTree = "<group>"; };
+		4526FF6018E0E1B5000A5547 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4526FF6218E0E1B5000A5547 /* KWSegmentedControlDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWSegmentedControlDemoTests.m; sourceTree = "<group>"; };
+		4526FF6F18E10325000A5547 /* KWSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWSegmentedControl.h; path = ../KWSegmentedControl.h; sourceTree = "<group>"; };
+		4526FF7018E10325000A5547 /* KWSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWSegmentedControl.m; path = ../KWSegmentedControl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4526FF3118E0E1B5000A5547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF3A18E0E1B5000A5547 /* CoreGraphics.framework in Frameworks */,
+				4526FF3C18E0E1B5000A5547 /* UIKit.framework in Frameworks */,
+				4526FF3818E0E1B5000A5547 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4526FF5218E0E1B5000A5547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF5718E0E1B5000A5547 /* XCTest.framework in Frameworks */,
+				4526FF5918E0E1B5000A5547 /* UIKit.framework in Frameworks */,
+				4526FF5818E0E1B5000A5547 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4526FF2B18E0E1B5000A5547 = {
+			isa = PBXGroup;
+			children = (
+				4526FF6F18E10325000A5547 /* KWSegmentedControl.h */,
+				4526FF7018E10325000A5547 /* KWSegmentedControl.m */,
+				4526FF3D18E0E1B5000A5547 /* KWSegmentedControlDemo */,
+				4526FF5C18E0E1B5000A5547 /* KWSegmentedControlDemoTests */,
+				4526FF3618E0E1B5000A5547 /* Frameworks */,
+				4526FF3518E0E1B5000A5547 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4526FF3518E0E1B5000A5547 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF3418E0E1B5000A5547 /* KWSegmentedControlDemo.app */,
+				4526FF5518E0E1B5000A5547 /* KWSegmentedControlDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4526FF3618E0E1B5000A5547 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF3718E0E1B5000A5547 /* Foundation.framework */,
+				4526FF3918E0E1B5000A5547 /* CoreGraphics.framework */,
+				4526FF3B18E0E1B5000A5547 /* UIKit.framework */,
+				4526FF5618E0E1B5000A5547 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4526FF3D18E0E1B5000A5547 /* KWSegmentedControlDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF4618E0E1B5000A5547 /* KWAppDelegate.h */,
+				4526FF4718E0E1B5000A5547 /* KWAppDelegate.m */,
+				4526FF4918E0E1B5000A5547 /* Main.storyboard */,
+				4526FF4C18E0E1B5000A5547 /* KWViewController.h */,
+				4526FF4D18E0E1B5000A5547 /* KWViewController.m */,
+				4526FF4F18E0E1B5000A5547 /* Images.xcassets */,
+				4526FF3E18E0E1B5000A5547 /* Supporting Files */,
+			);
+			path = KWSegmentedControlDemo;
+			sourceTree = "<group>";
+		};
+		4526FF3E18E0E1B5000A5547 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF3F18E0E1B5000A5547 /* KWSegmentedControlDemo-Info.plist */,
+				4526FF4018E0E1B5000A5547 /* InfoPlist.strings */,
+				4526FF4318E0E1B5000A5547 /* main.m */,
+				4526FF4518E0E1B5000A5547 /* KWSegmentedControlDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4526FF5C18E0E1B5000A5547 /* KWSegmentedControlDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF6218E0E1B5000A5547 /* KWSegmentedControlDemoTests.m */,
+				4526FF5D18E0E1B5000A5547 /* Supporting Files */,
+			);
+			path = KWSegmentedControlDemoTests;
+			sourceTree = "<group>";
+		};
+		4526FF5D18E0E1B5000A5547 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4526FF5E18E0E1B5000A5547 /* KWSegmentedControlDemoTests-Info.plist */,
+				4526FF5F18E0E1B5000A5547 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4526FF3318E0E1B5000A5547 /* KWSegmentedControlDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4526FF6618E0E1B5000A5547 /* Build configuration list for PBXNativeTarget "KWSegmentedControlDemo" */;
+			buildPhases = (
+				4526FF3018E0E1B5000A5547 /* Sources */,
+				4526FF3118E0E1B5000A5547 /* Frameworks */,
+				4526FF3218E0E1B5000A5547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KWSegmentedControlDemo;
+			productName = KWSegmentedControlDemo;
+			productReference = 4526FF3418E0E1B5000A5547 /* KWSegmentedControlDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4526FF5418E0E1B5000A5547 /* KWSegmentedControlDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4526FF6918E0E1B5000A5547 /* Build configuration list for PBXNativeTarget "KWSegmentedControlDemoTests" */;
+			buildPhases = (
+				4526FF5118E0E1B5000A5547 /* Sources */,
+				4526FF5218E0E1B5000A5547 /* Frameworks */,
+				4526FF5318E0E1B5000A5547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4526FF5B18E0E1B5000A5547 /* PBXTargetDependency */,
+			);
+			name = KWSegmentedControlDemoTests;
+			productName = KWSegmentedControlDemoTests;
+			productReference = 4526FF5518E0E1B5000A5547 /* KWSegmentedControlDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4526FF2C18E0E1B5000A5547 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KW;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kurt Wagner";
+				TargetAttributes = {
+					4526FF5418E0E1B5000A5547 = {
+						TestTargetID = 4526FF3318E0E1B5000A5547;
+					};
+				};
+			};
+			buildConfigurationList = 4526FF2F18E0E1B5000A5547 /* Build configuration list for PBXProject "KWSegmentedControlDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4526FF2B18E0E1B5000A5547;
+			productRefGroup = 4526FF3518E0E1B5000A5547 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4526FF3318E0E1B5000A5547 /* KWSegmentedControlDemo */,
+				4526FF5418E0E1B5000A5547 /* KWSegmentedControlDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4526FF3218E0E1B5000A5547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF5018E0E1B5000A5547 /* Images.xcassets in Resources */,
+				4526FF4218E0E1B5000A5547 /* InfoPlist.strings in Resources */,
+				4526FF4B18E0E1B5000A5547 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4526FF5318E0E1B5000A5547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF6118E0E1B5000A5547 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4526FF3018E0E1B5000A5547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF4E18E0E1B5000A5547 /* KWViewController.m in Sources */,
+				4526FF4818E0E1B5000A5547 /* KWAppDelegate.m in Sources */,
+				4526FF7118E10325000A5547 /* KWSegmentedControl.m in Sources */,
+				4526FF4418E0E1B5000A5547 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4526FF5118E0E1B5000A5547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526FF6318E0E1B5000A5547 /* KWSegmentedControlDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4526FF5B18E0E1B5000A5547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4526FF3318E0E1B5000A5547 /* KWSegmentedControlDemo */;
+			targetProxy = 4526FF5A18E0E1B5000A5547 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4526FF4018E0E1B5000A5547 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4526FF4118E0E1B5000A5547 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4526FF4918E0E1B5000A5547 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4526FF4A18E0E1B5000A5547 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4526FF5F18E0E1B5000A5547 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4526FF6018E0E1B5000A5547 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4526FF6418E0E1B5000A5547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4526FF6518E0E1B5000A5547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4526FF6718E0E1B5000A5547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KWSegmentedControlDemo/KWSegmentedControlDemo-Prefix.pch";
+				INFOPLIST_FILE = "KWSegmentedControlDemo/KWSegmentedControlDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4526FF6818E0E1B5000A5547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KWSegmentedControlDemo/KWSegmentedControlDemo-Prefix.pch";
+				INFOPLIST_FILE = "KWSegmentedControlDemo/KWSegmentedControlDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4526FF6A18E0E1B5000A5547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KWSegmentedControlDemo.app/KWSegmentedControlDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KWSegmentedControlDemo/KWSegmentedControlDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KWSegmentedControlDemoTests/KWSegmentedControlDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4526FF6B18E0E1B5000A5547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KWSegmentedControlDemo.app/KWSegmentedControlDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KWSegmentedControlDemo/KWSegmentedControlDemo-Prefix.pch";
+				INFOPLIST_FILE = "KWSegmentedControlDemoTests/KWSegmentedControlDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4526FF2F18E0E1B5000A5547 /* Build configuration list for PBXProject "KWSegmentedControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4526FF6418E0E1B5000A5547 /* Debug */,
+				4526FF6518E0E1B5000A5547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4526FF6618E0E1B5000A5547 /* Build configuration list for PBXNativeTarget "KWSegmentedControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4526FF6718E0E1B5000A5547 /* Debug */,
+				4526FF6818E0E1B5000A5547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4526FF6918E0E1B5000A5547 /* Build configuration list for PBXNativeTarget "KWSegmentedControlDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4526FF6A18E0E1B5000A5547 /* Debug */,
+				4526FF6B18E0E1B5000A5547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4526FF2C18E0E1B5000A5547 /* Project object */;
+}
