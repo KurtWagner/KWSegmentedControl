@@ -24,32 +24,10 @@
 
 @class KWSegmentedControl;
 
-/// Listen to changes in the segmented control
-@protocol KWSegmentedControlDelegate <NSObject>
-@optional
-/**
- *  A segmented control will change to this.
- *  @param segmentedControl Segmented Control that will change
- *  @param index            Index changing to
- */
-- (void)segmentedControl:(KWSegmentedControl *)segmentedControl willChangeToIndex:(NSUInteger)index;
-
-/**
- *  A segmented control did change to this.
- *  @param segmentedControl Segmented control that did change
- *  @param index            Index did change to
- */
-- (void)segmentedControl:(KWSegmentedControl *)segmentedControl didChangeToIndex:(NSUInteger)index;
-@end
-
 /// Simple customizable segmented control with delegate
-@interface KWSegmentedControl : UIView
+@interface KWSegmentedControl : UIControl
 
-/// KWSegmentedControl
-@property (nonatomic, weak) id<KWSegmentedControlDelegate> delegate;
-
-/// Array of titles
-@property (nonatomic, strong) NSArray *options;
+#pragma mark - Styling Options
 
 /// Background color of the segment track (background)
 @property (nonatomic, strong) UIColor *trackBackgroundColor;
@@ -75,29 +53,21 @@
 /// Border color for selected segment (foreground)
 @property (nonatomic, strong) UIColor *segmentBorderColor;
 
-/**
- *  Returns the title of the option at a given index
- *  @param index
- *  @return Title at given index
- */
-- (NSString *)titleAtIndex:(NSUInteger)index;
+/// Array of titles
+@property (nonatomic, strong) NSArray *options;
+
+#pragma mark - UISegmentedControl
+
+/// The index number identifying the selected segment (that is, the last segment touched).
+@property(nonatomic) NSInteger selectedSegmentIndex;
 
 /**
- *  Returns the selected segment's index
- *  @return selected segment's index
+ *  Returns the title of the specified segment.
+ *
+ *  @param segment An index number identifying a segment in the control. It must be a number between 0 and the number of segments (numberOfSegments) minus 1; values exceeding this upper range are pinned to it.
+ *
+ *  @return Returns the string (title) assigned to the receiver as content. If no title has been set, it returns nil.
  */
-- (NSUInteger)selectedIndex;
-
-/**
- *  Returns the selected segment's title
- *  @return Title of selected segment
- */
-- (NSString *)selectedTitle;
-
-/**
- *  Sets the selected index
- *  @param index Index to set selected to
- */
-- (void)setSelectedIndex:(NSUInteger)index;
+- (NSString *)titleForSegmentAtIndex:(NSUInteger)segment;
 
 @end

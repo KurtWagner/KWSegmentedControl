@@ -35,9 +35,7 @@
 
 @end
 
-@implementation KWSegmentedControl {
-	NSUInteger __selectedIndex;
-}
+@implementation KWSegmentedControl
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -113,7 +111,7 @@
 		[self setButtonOptions:optionsArray];
 		
 		// setup the selected option view
-		self.selectedButton = [self.buttonOptions objectAtIndex:self.selectedIndex];
+		self.selectedButton = [self.buttonOptions objectAtIndex:self.selectedSegmentIndex];
 		CGFloat width = CGRectGetWidth(self.overlay.frame);
 		center.x = width * (self.selectedButton.tag + 1) - width / 2;
 		self.overlay.center = center;
@@ -122,27 +120,11 @@
 	}
 }
 
-- (NSString *)titleAtIndex:(NSUInteger)index {
-	if (index >= self.options.count) {
-		return nil;
+- (NSString *)titleForSegmentAtIndex:(NSUInteger)segment {
+	if (segment > self.options.count) {
+		segment = self.options.count - 1;
 	}
-	return [self.options objectAtIndex:index];
-}
-
-- (NSUInteger)selectedIndex {
-	return __selectedIndex;
-}
-
-- (NSString *)selectedTitle {
-	return [self titleAtIndex:self.selectedIndex];
-}
-
-- (void)setSelectedIndex:(NSUInteger)index {
-	__selectedIndex = index;
-	if (index >= self.buttonOptions.count) {
-		return;
-	}
-	self.selectedButton = [self.buttonOptions objectAtIndex:index];
+	return [self.options objectAtIndex:segment];
 }
 
 #pragma mark - IBAction
@@ -151,15 +133,12 @@
 	if (sender == self.selectedButton) {
 		return;
 	}
+	[self sendActionsForControlEvents:UIControlEventTouchDown];
 	
 	NSUInteger index = sender.tag;
 	CGPoint center = sender.center;
 	CGFloat width = CGRectGetWidth(self.overlay.frame);
 	center.x = width * (index + 1) - width / 2;
-	
-	if (self.delegate && [self.delegate respondsToSelector:@selector(segmentedControl:willChangeToIndex:)]) {
-		[self.delegate segmentedControl:self willChangeToIndex:index];
-	}
 
 	[UIView animateWithDuration:.1f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^{
 		self.overlay.center = center;
@@ -170,11 +149,10 @@
 		[self.selectedButton setTitleColor:self.trackTextColor forState:UIControlStateNormal];
 		
 	} completion:^(__unused BOOL finished) {
-		if (self.delegate && [self.delegate respondsToSelector:@selector(segmentedControl:didChangeToIndex:)]) {
-			[self.delegate segmentedControl:self didChangeToIndex:index];
-		}
-		__selectedIndex = index;
+		self.selectedSegmentIndex = index;
 		self.selectedButton = sender;
+		
+		[self sendActionsForControlEvents:UIControlEventValueChanged];
 	}];
 }
 

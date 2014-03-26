@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "KWSegmentedControl.h"
 
-@interface KWViewController : UIViewController <KWSegmentedControlDelegate>
+@interface KWViewController : UIViewController
 
 @end
