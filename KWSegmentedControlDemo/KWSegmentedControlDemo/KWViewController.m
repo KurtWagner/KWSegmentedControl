@@ -42,6 +42,7 @@
 	controlA.segmentBorderColor = [UIColor lightGrayColor];
 	
 	[controlA setOptions:@[@"Segment One", @"Segment Two"]];
+	[controlA setSelectedSegmentIndex: 1];
 	
 	[self.view addSubview:controlA];
 	center.y += 40;
@@ -78,6 +79,11 @@
 	
 	[controlA addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
 	[controlB addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+	
+	dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2.0);
+	dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+		[controlB setSelectedSegmentIndex:1 animated:YES];
+	});
 	
 }
 

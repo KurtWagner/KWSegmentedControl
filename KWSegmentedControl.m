@@ -27,11 +27,8 @@
 /// Overlay that appears above the segmented option
 @property (nonatomic, strong) UIView *overlay;
 
-/// The current selected button
-@property (nonatomic, strong) UIButton *selectedButton;
-
 /// Array containing buttons in segment
-@property (nonatomic, strong) NSArray *buttonOptions;
+@property (nonatomic, strong) NSArray *segments;
 
 @end
 
@@ -108,15 +105,8 @@
 			
 			center.x += frame.size.width;
 		}
-		[self setButtonOptions:optionsArray];
-		
-		// setup the selected option view
-		self.selectedButton = [self.buttonOptions objectAtIndex:self.selectedSegmentIndex];
-		CGFloat width = CGRectGetWidth(self.overlay.frame);
-		center.x = width * (self.selectedButton.tag + 1) - width / 2;
-		self.overlay.center = center;
-		[self.selectedButton.titleLabel setFont:self.segmentFont];
-		[self.selectedButton setTitleColor:self.segmentTextColor forState:UIControlStateNormal];
+		[self setSegments:optionsArray];
+		[self setSelectedSegmentIndex:self.selectedSegmentIndex];
 	}
 }
 
@@ -127,33 +117,58 @@
 	return [self.options objectAtIndex:segment];
 }
 
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex {
+	@synchronized(self) {
+		if (self.segments.count == 0) {
+			_selectedSegmentIndex = selectedSegmentIndex;
+			return;
+		}
+		
+		UIButton *fromButton = [self.segments objectAtIndex:_selectedSegmentIndex];
+		UIButton *toButton = [self.segments objectAtIndex:selectedSegmentIndex];
+		
+		if (self.overlay) {
+			CGPoint center = toButton.center;
+			CGFloat width = CGRectGetWidth(self.overlay.frame);
+			center.x = width * (selectedSegmentIndex + 1) - width / 2;
+			self.overlay.center = center;
+		}
+		
+		[fromButton.titleLabel setFont:self.trackFont];
+		[fromButton setTitleColor:self.trackTextColor forState:UIControlStateNormal];
+		
+		[toButton.titleLabel setFont:self.segmentFont];
+		[toButton setTitleColor:self.segmentTextColor forState:UIControlStateNormal];
+		
+		_selectedSegmentIndex = selectedSegmentIndex;
+	}
+}
+
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex animated:(BOOL)animated {
+	if (_selectedSegmentIndex == selectedSegmentIndex) {
+		return;
+	}
+
+	if (!animated) {
+		[self setSelectedSegmentIndex:selectedSegmentIndex];
+		[self sendActionsForControlEvents:UIControlEventValueChanged];
+		return;
+	}
+	
+	[self sendActionsForControlEvents:UIControlEventValueChanged];
+	[UIView animateWithDuration:.1f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^{
+		self.selectedSegmentIndex = selectedSegmentIndex;
+	} completion:^(__unused BOOL finished) {
+		[self sendActionsForControlEvents:UIControlEventValueChanged];
+	}];
+}
+
+
 #pragma mark - IBAction
 
 - (IBAction)selectOption:(UIButton *)sender {
-	if (sender == self.selectedButton) {
-		return;
-	}
 	[self sendActionsForControlEvents:UIControlEventTouchDown];
-	
-	NSUInteger index = sender.tag;
-	CGPoint center = sender.center;
-	CGFloat width = CGRectGetWidth(self.overlay.frame);
-	center.x = width * (index + 1) - width / 2;
-
-	[UIView animateWithDuration:.1f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^{
-		self.overlay.center = center;
-		[sender.titleLabel setFont:self.segmentFont];
-		[sender setTitleColor:self.segmentTextColor forState:UIControlStateNormal];
-		
-		[self.selectedButton.titleLabel setFont:self.trackFont];
-		[self.selectedButton setTitleColor:self.trackTextColor forState:UIControlStateNormal];
-		
-	} completion:^(__unused BOOL finished) {
-		self.selectedSegmentIndex = index;
-		self.selectedButton = sender;
-		
-		[self sendActionsForControlEvents:UIControlEventValueChanged];
-	}];
+	[self setSelectedSegmentIndex:sender.tag animated:YES];
 }
 
 @end

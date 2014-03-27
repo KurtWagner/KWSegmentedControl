@@ -70,4 +70,12 @@
  */
 - (NSString *)titleForSegmentAtIndex:(NSUInteger)segment;
 
+/**
+ *  Set the selected segment index value with an option to animate the transition.
+ *
+ *  @param selectedSegmentIndex Index of the segment to select
+ *  @param animated             Flag indicating whether the transition should be animated
+ */
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex animated:(BOOL)animated;
+
 @end
