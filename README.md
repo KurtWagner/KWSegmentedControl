@@ -16,20 +16,17 @@ Simple and customisable segmentation controls.
 
 You can manually install the library by copying the `KWSegmentedControl.h` and `KWSegmentedControl.m` into your project.
 
-## Example
+## Example (NSString titles)
 
     - (void)viewDidLoad {
         [super viewDidLoad];
-        KWSegmentedControl *control = [[KWSegmentedControl alloc] initWithFrame:frame];
-        control.options = @[@“Segment One", @"Segment Two"];
-        control.delegate = self;
+        KWSegmentedControl *control = [[KWSegmentedControl alloc] initWithItems:@[@“Segment One", @"Segment Two"]];
+        [control addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
         [self.view addSubview:control];
     }
 
-    #pragma mark - KWSegmentedControlDelegate
-
-    - (void)segmentedControl:(KWSegmentedControl *)segmentedControl willChangeToIndex:(NSUInteger)index {
-        NSString *title = [segmentedControl titleAtIndex:index];
+    - (void)segmentChanged:(KWSegmentedControl *)control {
+	    NSString * title = [control titleForSegmentAtIndex:control.selectedSegmentIndex];
         NSLog(@“Selected segment %@“, title);
     }
 
