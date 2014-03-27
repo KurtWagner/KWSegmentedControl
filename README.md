@@ -35,7 +35,11 @@ You can manually install the library by copying the `KWSegmentedControl.h` and `
 
 ##TODO
 
+See [development branch](https://github.com/KurtWagner/KWSegmentedControl/tree/development).
+
 - Custom segment views (e.g, to allow images and full customisation) as oppose to forcing strings.
+- Implement target-action pattern
+- Adopt `UISegmentControl` API (keep it consistent)
 
 ## License
 
