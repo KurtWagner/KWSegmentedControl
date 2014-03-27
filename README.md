@@ -2,6 +2,8 @@
 
 Simple and customisable segmentation controls.
 
+![](https://raw.github.com/KurtWagner/KWSegmentedControl/master/Sample.gif "Sample")
+
 ## Requirements
 
 - Objective-C ARC
@@ -18,7 +20,8 @@ You can manually install the library by copying the `KWSegmentedControl.h` and `
 
 ## Example (NSString titles)
 
-    - (void)viewDidLoad {
+    - (void)viewDidLoad 
+    {
         [super viewDidLoad];
         KWSegmentedControl *control = [[KWSegmentedControl alloc] initWithItems:@[@“Segment One", @"Segment Two"]];
         [control addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
@@ -29,6 +32,10 @@ You can manually install the library by copying the `KWSegmentedControl.h` and `
 	    NSString * title = [control titleForSegmentAtIndex:control.selectedSegmentIndex];
         NSLog(@“Selected segment %@“, title);
     }
+
+##TODO
+
+- Custom segment views (e.g, to allow images and full customisation) as oppose to forcing strings.
 
 ## License
 
@@ -53,4 +60,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
