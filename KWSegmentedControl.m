@@ -83,7 +83,9 @@
 		CGPoint center = CGPointMake(frame.size.width/2, frame.size.height/2);
 		
 		// setup the selected overlay
-		self.overlay = [[UIView alloc] initWithFrame:frame];
+		if (!self.overlay) {
+			self.overlay = [[UIView alloc] initWithFrame:frame];
+		}
 		[self.overlay setCenter:center];
 		[self.overlay setBackgroundColor:self.segmentBackgroundColor];
 		self.overlay.layer.borderColor = [self.segmentBorderColor CGColor];
@@ -92,10 +94,14 @@
 		self.overlay.layer.cornerRadius = self.layer.cornerRadius;
 		[self addSubview:self.overlay];
 		
+		
+		for (UIButton *button in self.buttonOptions) {
+			[button removeFromSuperview];
+		}
 		// setup the options
 		NSMutableArray *optionsArray = [NSMutableArray arrayWithCapacity:count];
 		for (NSString *title in self.options) {
-    			NSAssert([title isKindOfClass:[NSString class]], @"Options must be NSString");
+			NSAssert([title isKindOfClass:[NSString class]], @"Options must be NSString");
 			
 			UIButton *button = [[UIButton alloc] initWithFrame:frame];
 			[button setBackgroundColor:[UIColor clearColor]];
@@ -160,7 +166,7 @@
 	if (self.delegate && [self.delegate respondsToSelector:@selector(segmentedControl:willChangeToIndex:)]) {
 		[self.delegate segmentedControl:self willChangeToIndex:index];
 	}
-
+	
 	[UIView animateWithDuration:.1f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^{
 		self.overlay.center = center;
 		[sender.titleLabel setFont:self.segmentFont];
