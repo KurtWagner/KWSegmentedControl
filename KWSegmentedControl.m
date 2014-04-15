@@ -178,4 +178,10 @@
 	}];
 }
 
+- (void)setOptions:(NSArray *)options {
+	_options = options;
+	
+	[self setupView];
+}
+
 @end
