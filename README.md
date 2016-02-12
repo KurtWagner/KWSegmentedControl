@@ -10,7 +10,7 @@ Simple and customisable segmentation controls.
 - iOS 7 or above (<7 untested)
 
 ## Installation
-### Cocoapods
+### CocoaPods
 
     pod 'KWSegmentedControl'
 
